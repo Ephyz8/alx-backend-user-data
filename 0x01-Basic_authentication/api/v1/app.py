@@ -23,15 +23,27 @@ def not_found(error) -> str:
 
 @app.errorhandler(401)
 def unauthorized(error) -> str:
-    """ Unauthorised request.
+    """_summary_
+
+    Args:
+        error (_type_): _description_
+
+    Returns:
+        str: _description_
     """
     return jsonify({"error": "Unauthorized"}), 401
 
 @app.errorhandler(403)
-def forbidden_request(error) -> str:
-    """ Forbidden request
+def forbidden(error) -> str:
+    """_summary_
+
+    Args:
+        error (_type_): _description_
+
+    Returns:
+        str: _description_
     """
-    return jsonify({"error": "forbidden_reques"}), 403
+    return jsonify({"error": "Forbidden"}), 403
 
 if __name__ == "__main__":
     host = getenv("API_HOST", "0.0.0.0")
