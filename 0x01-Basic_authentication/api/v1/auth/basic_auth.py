@@ -113,4 +113,3 @@ class BasicAuth(Auth):
                             email, password)
 
         return
-    
